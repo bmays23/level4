@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: aquamarine;
+    text-align: center;
+    
+}
+
+.header {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin-top: 0px;
+
+
+}
+
+input {
+    border-radius: 20px;
+    height: 35px;
+    width: 200px;
+    margin: 5px;
+    text-align: center;
+
+}
+
+button {
+    border-radius: 0px;
+    height: 35px;
+    box-shadow: 2px 1px gray;
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+    margin: 0px;
+}
