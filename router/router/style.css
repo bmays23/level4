@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+}
+
+.navbar {
+    height: 80px;
+    background-image: linear-gradient(to bottom right, rgb(234, 179, 41), white);
+    
+}
+
+.link {
+    font-size: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
