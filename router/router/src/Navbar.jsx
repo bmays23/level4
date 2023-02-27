@@ -11,7 +11,7 @@ function Navbar() {
 
         <div className='navbar'>
 
-            <nav style={{ margin: 0 }} className='nav-container'> 
+            <nav style={{ margin: 0 }} > 
                 <Link to="/Home" style={{ padding: 5 }} className='link'> 
                 Home
                 </Link> 
