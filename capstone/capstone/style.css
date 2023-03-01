@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mynerve';
+    margin: 0;
+
+}
+
+
+nav {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-image: url("/IMG_5804.JPG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.anime-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.randomize-button {
+    background-image: url(/IMG_5806.PNG);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: white;
+    border-style: none;
+    box-shadow: 2px 2px 2px gray;
+
+}
+
+.delete-button {
+    margin: 10px;
+    color: red;
+}
+
+iframe {
+    padding: 15px;
+    border-style: none;
+}
+
+h4 {
+    color: red;
+}

@@ -6,19 +6,21 @@ function Home() {
     const {anime, getNewAnime, handleSubmit} = useContext(DataContext)
 
     return (
-        <div>
+        <div className="anime-container">
        <img src={anime.randomAnime} />
        <h2>{anime.title}</h2>
        <h4>{anime.rating}</h4>
        <p>{anime.synopsis}</p>
        <button
           onClick={getNewAnime}
+          className="randomize-button"
         >
-          Check out this anime!
+          
         </button>
         <form>
             <button 
                 onClick={handleSubmit}
+                className="add-button"
             >
                 Add to Watchlist
             </button>

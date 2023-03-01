@@ -51,13 +51,16 @@ function Anime(props) {
     ]))
   }
 
- 
+  function deleteAnime() {
+    let arr = favAnime.slice(0, -1)
+    setFavAnime(arr)
+} 
 
   
     return (
     <DataContext.Provider
     value={{
-        anime, allAnime, favAnime, setAllAnime, getNewAnime, handleSubmit
+        anime, allAnime, favAnime, setAllAnime, getNewAnime, handleSubmit, deleteAnime
     }}>
         {props.children}
 

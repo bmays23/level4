@@ -8,7 +8,7 @@ import Trailer from "./Trailer"
 function App() {
 
   return (
-    <div className='navbar'>
+    <div className="app-container">
 
         <nav style={{ margin: 0 }} > 
             <Link to="/Home" style={{ padding: 5 }} className='link'> 
