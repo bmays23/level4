@@ -1,51 +1,40 @@
 import React, {useState} from "react"
+import { Routes, Route, Link} from "react-router-dom"
+import Home from "./Home"
+import { Anime } from "./Anime"
+import Favorites from "./Favorites"
+import Trailer from "./Trailer"
 
 function App() {
 
-  const [anime, setAnime] = useState({
-    title: "",
-    rating: "",
-    randomAnime: ""
-  })
-  const [allAnime, setAllAnime] = useState([])
-
-  React.useEffect(() => {
-    fetch("https://api.jikan.moe/v4/anime")
-        .then(res => res.json())
-        .then(data => setAllAnime(data.data))
-}, [])
-
-
-  console.log(allAnime)
-  
-  function getNewAnime() {
-
-    const randomNumber = Math.floor(Math.random() * allAnime.length)
-    const image = allAnime[randomNumber].images.jpg.image_url
-    const rating = allAnime[randomNumber].rating
-
-
-    setAnime(prevAnime => ({
-      ...prevAnime,
-        randomAnime: image,
-        rating: rating
-    }))
-    
-}
-
-
-
   return (
-    <div>
-       <img src={anime.randomAnime} />
-       <h2>{anime.rating}</h2>
-       <button
-          onClick={getNewAnime}
-        >
-          Check out this anime!
-        </button>
-    </div>
-  )
+    <div className='navbar'>
+
+        <nav style={{ margin: 0 }} > 
+            <Link to="/Home" style={{ padding: 5 }} className='link'> 
+            Home
+            </Link> 
+            <Link to="/Watchlist" style={{ padding: 5 }} className='link'> 
+            Watchlist
+            </Link>
+            <Link to="/Trailer" style={{ padding: 5 }} className='link'> 
+            Trailer
+            </Link>
+            
+        </nav> 
+
+        <Anime>
+          <Routes>
+              <Route path='Home' element={<Home />} />
+              <Route path='Watchlist' element={<Favorites />} />
+              <Route path='Trailer' element={<Trailer />} />
+
+          </Routes>
+        </Anime>
+
+    </div> 
+    
+)
 }
 
 export default App
